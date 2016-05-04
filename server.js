@@ -6,14 +6,15 @@ var s3 = new AWS.S3();
 var express = require("express");
 var app = express();
 var bodyParser = require('body-parser');
-
+var connect = require('connect');
 var errorHandler = require('errorhandler');
 var methodOverride = require('method-override');
 var hostname = process.env.HOSTNAME || 'localhost';
 var port = 8080;
+var db = require('./node_modules/mongoskin').db('mongodb://user:password@127.0.0.1:27017/S3Upload');
 app.use(methodOverride());
 app.use(bodyParser());
-
+app.use(connect());
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
@@ -40,7 +41,7 @@ app.post('/uploadFile', function (req, res) {
 
     fs.readFile(tmpPath, function (err, data) {
         var params = {
-            Bucket: 'ame470'
+            Bucket: 'compian470'
             , ACL: 'public-read'
             , Key: intname
             , Body: data
