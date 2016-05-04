@@ -12,8 +12,7 @@ var methodOverride = require('method-override');
 var hostname = process.env.HOSTNAME || 'localhost';
 var port = 8080;
 app.use(methodOverride());
-//app.use(bodyParser());
-app.use(require('connect').bodyParser());
+app.use(bodyParser());
 
 
 // parse application/x-www-form-urlencoded

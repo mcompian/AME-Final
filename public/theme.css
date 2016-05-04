@@ -1,0 +1,97 @@
+body {
+    background-color: #182026;
+    margin-top: 10px;
+}
+
+h1 {
+    align-content: center;
+    border-bottom-style: solid;
+    color: white;
+    font-size: 48px;
+    text-align: center;
+}
+
+h2 {
+    background-color: white;
+}
+
+p {
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+
+.bigScreen #chooseFile {
+    background-color: darkcyan;
+    display: inline-block;
+    height: 90%;
+    vertical-align: top;
+    width: 25%;
+}
+
+#putInBucket {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    margin:0 25% 0 25%;
+    padding: 5px;
+}
+
+#theFileUploader {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    margin-left: 10%;
+    padding: 5px;
+    width: 80%;
+}
+
+.bigScreen #viewFile {
+    background-color: firebrick;
+    display: inline-block;
+    height: 90%;
+    vertical-align: top;
+    width: 70%;
+}
+
+.fadeBox {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: auto;
+}
+
+@-webkit-keyframes infinite-spinning {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes infinite-spinning {
+    0% {
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(360deg);
+    }
+}
+
+.theSpinner {
+    -webkit-animation: infinite-spinning 1s infinite linear;
+    animation: infinite-spinning 1s infinite linear;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, .4);
+    margin: auto;
+    margin-top: 50%;
+}

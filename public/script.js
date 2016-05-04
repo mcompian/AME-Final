@@ -1,3 +1,5 @@
+spoofUserAgent();
+
 var fileUploaded = function () {
     var file = $('#theFileUploader').get(0);
     var fileObj = $('#theFileUploader').get(0).files[0]

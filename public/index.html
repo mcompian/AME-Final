@@ -1,14 +1,27 @@
 <html>
 
 <head>
-    <script src='jquery-2.2.1.min.js'></script>
-    <script>
-        
-    </script>
+    <script src='jquery-2.2.3.js'></script>
+    <script src='uaSpoofing.js'></script>
+    <script src='script.js'></script>
+    <link rel='stylesheet' href='theme.css' type='text/css'>
 </head>
 
-<body>
-    <input type='file' id='theFileUploader' onchange='fileUploaded()'>
+<body onload="spoofUserAgent()">
+    <div>
+        <h1 align='center'>S3 File Uploader</h1>
+    </div>
+    <div align='center' id='whole'>
+        <div id='chooseFile'>
+            <h2 align='center'>Select a file:</h2>
+            <input type='file' id='theFileUploader' onchange='fileUploaded()'>
+            <br>
+            <br>
+            <button id='putInBucket' onclick='putFileInBucket()'>Place file in bucket!</button>
+        </div>
+        <div id='viewFile'>
+        </div>
+    </div>
 </body>
 
 </html>
